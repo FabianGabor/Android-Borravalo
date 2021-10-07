@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Borravalo</string>
 	<string name="how_was_the_service">How was the service?</string>
 	<string name="exceptional_20">Exceptional (20%)</string>
 	<string name="very_good_15">Very good (15%)</string>
