@@ -3,6 +3,7 @@ package com.example.myapplication
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.myapplication.databinding.ActivityMainBinding
+import java.text.NumberFormat
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
@@ -28,8 +29,7 @@ class MainActivity : AppCompatActivity() {
             binding.tipResult.text = "ERROR!"
             return
         }
-        val selectedId = binding.tipOptions.checkedRadioButtonId
-        val tipPercent = when (selectedId) {
+        val tipPercent = when (binding.tipOptions.checkedRadioButtonId) {
             R.id.option_20 -> 0.20
             R.id.option_15 -> 0.15
             else -> 0.10
@@ -39,6 +39,8 @@ class MainActivity : AppCompatActivity() {
         if (roundUp) {
             tip = kotlin.math.ceil(tip)
         }
-        binding.tipResult.text = tip.toString()
+        val formattedip = NumberFormat.getCurrencyInstance().format(tip)
+        //binding.tipResult.text = formattedip.toString()
+        binding.tipResult.text = getString(R.string.tip_sum, formattedip)
     }
 }

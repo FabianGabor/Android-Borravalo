@@ -20,7 +20,7 @@
 				app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/service_question"
 				android:orientation="vertical">
 		<RadioButton android:id="@+id/option_20" android:layout_width="wrap_content"
-					 android:layout_height="wrap_content" android:text="@string/exceptional_20"/>
+					 android:layout_height="wrap_content" android:text="@string/exceptional_20" android:checked="true"/>
 		<RadioButton android:id="@+id/option_15" android:layout_width="wrap_content"
 					 android:layout_height="wrap_content" android:text="@string/very_good_15"/>
 		<RadioButton android:id="@+id/option_10" android:layout_width="wrap_content"
@@ -37,7 +37,7 @@
 			app:layout_constraintTop_toBottomOf="@id/round_up_switch" android:text="@string/calculate"/>
 
 	<TextView android:id="@+id/tip_result" android:layout_width="wrap_content" android:layout_height="wrap_content"
-			  android:text="@string/tip_sum" app:layout_constraintEnd_toEndOf="parent"
+			  tools:text="@string/tip_sum" app:layout_constraintEnd_toEndOf="parent"
 			  app:layout_constraintTop_toBottomOf="@id/calculate_btn" android:textSize="24sp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
